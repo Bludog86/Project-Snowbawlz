@@ -2,128 +2,158 @@
 
 Dog::Dog()
 {
+	m_name = new string("");
+	m_handlerFirstName = new string("");
+	m_handlerLastName = new string("");
+	m_age = new int(0);
+	m_origin = new string("");
+	m_placementDate = new string("");
+	m_breed = new string("");
+	m_cost = new float(0);
+	m_tasks = new string(""); // 3 tasks to perform to qualify as a service dog
+	m_idExpiration = new string(""); // when will the Public Access ID expire
+	m_publicAccess = new bool(false); // does the handler team have public access
+	m_certificates = new string(""); // accomplishments of the dog
+	m_classLevel = new string(""); // class level of the handler team as per VSD standards
+}
+
+Dog::Dog(string nm, string org)
+{
+	m_name = new string(nm);
+	m_handlerFirstName = new string("");
+	m_handlerLastName = new string("");
+	m_age = new int(0);
+	m_origin = new string(org);
+	m_placementDate = new string("");
+	m_breed = new string("");
+	m_cost = new float(0);
+	m_tasks = new string(""); // 3 tasks to perform to qualify as a service dog
+	m_idExpiration = new string(""); // when will the Public Access ID expire
+	m_publicAccess = new bool(false); // does the handler team have public access
+	m_certificates = new string(""); // accomplishments of the dog
+	m_classLevel = new string(""); // class level of the handler team as per VSD standards
 }
 
 void Dog::setName(string nm)
 {
-	name = nm;
+	*m_name = nm;
 }
 
 void Dog::setHandlerFirstName(string fn)
 {
-	handlerFirstName = fn;
+	*m_handlerFirstName = fn;
 }
 
 void Dog::setHandlerLastName(string ln)
 {
-	handlerLastName = ln;
+	*m_handlerLastName = ln;
 }
 
 void Dog::setAge(int a)
 {
-	age = a;
+	*m_age = a;
 }
 
 void Dog::setOrigin(string org)
 {
-	origin = org;
+	*m_origin = org;
 }
 
 void Dog::setPlacementDate(string place)
 {
-	placementDate = place;
+	*m_placementDate = place;
 }
 
 void Dog::setBreed(string brd)
 {
-	breed = brd;
+	*m_breed = brd;
 }
 
 void Dog::setCost(float cst)
 {
-	cost = cst;
+	*m_cost = cst;
 }
 
 void Dog::setTasks(string tsk)
 {
-	tasks = tsk;
+	*m_tasks = tsk;
 }
 
 void Dog::setIDExpiration(string idex)
 {
-	idExpiration = idex;
+	*m_idExpiration = idex;
 }
 
 void Dog::setPublicAccess(string pa)
 {
-	publicAccess = true;
+	*m_publicAccess = true;
 }
 
 void Dog::setCertificates(string cert)
 {
-	certificates = cert;
+	*m_certificates = cert;
 }
 
 void Dog::setClassLevel(string lvl)
 {
-	classLevel = lvl;
+	*m_classLevel = lvl;
 }
 void Dog::print()
 {
-	cout << "Handler: " << handlerFirstName << " " << handlerLastName << endl
-		<< "Dog: " << name << endl
-		<< "Age: " << age << endl
-		<< "Origin of the Dog: " << origin << endl;
+	cout << "Handler: " << *m_handlerFirstName << " " << *m_handlerLastName << endl
+		<< "Dog: " << *m_name << endl
+		<< "Age: " << *m_age << endl
+		<< "Origin of the Dog: " << *m_origin << endl;
 }
 string Dog::getName() const
 {
-	return name;
+	return *m_name;
 }
 string Dog::getHandlerFirstName() const
 {
-	return handlerFirstName;
+	return *m_handlerFirstName;
 }
 string Dog::getHandlerLastName() const
 {
-	return handlerLastName;
+	return *m_handlerLastName;
 }
 int Dog::getAge() const
 {
-	return age;
+	return *m_age;
 }
 string Dog::getOrigin() const
 {
-	return origin;
+	return *m_origin;
 }
 string Dog::getPlacementDate() const
 {
-	return placementDate;
+	return *m_placementDate;
 }
 string Dog::getBreed() const
 {
-	return breed;
+	return *m_breed;
 }
 float Dog::getCost() const
 {
-	return cost;
+	return *m_cost;
 }
 string Dog::getTasks() const
 {
-	return tasks;
+	return *m_tasks;
 }
 string Dog::getIDExpiration() const
 {
-	return idExpiration;
+	return *m_idExpiration;
 }
 bool Dog::getPublicAccess() const
 {
-	return publicAccess;
+	return *m_publicAccess;
 }
 string Dog::getCertificates() const
 {
-	return certificates;
+	return *m_certificates;
 }
 string Dog::getClassLevel() const
 {
-	return classLevel;
+	return *m_classLevel;
 }

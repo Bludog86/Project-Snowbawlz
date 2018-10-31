@@ -29,6 +29,7 @@ public:
 	void setCertificates(string cert);
 	void setClassLevel(string lvl);
 	void print();
+
 	// get
 	string getName() const;
 	string getHandlerFirstName() const;
@@ -45,18 +46,18 @@ public:
 	string getClassLevel() const;
 
 private:
-	string name;
-	string handlerFirstName;
-	string handlerLastName;
-	int age;
-	string origin;
-	string placementDate;
-	string breed;
-	float cost;
-	string tasks; // 3 tasks to perform to qualify as a service dog
-	string idExpiration; // when will the Public Access ID expire
-	bool publicAccess = false; // does the handler team have public access
-	string certificates; // accomplishments of the dog
-	string classLevel; // class level of the handler team as per VSD standards
+	string *m_name;
+	string *m_handlerFirstName;
+	string *m_handlerLastName;
+	int *m_age;
+	string *m_origin;
+	string *m_placementDate;
+	string *m_breed;
+	float *m_cost;
+	string *m_tasks; // 3 tasks to perform to qualify as a service dog
+	string *m_idExpiration; // when will the Public Access ID expire
+	bool *m_publicAccess; // does the handler team have public access
+	string *m_certificates; // accomplishments of the dog
+	string *m_classLevel; // class level of the handler team as per VSD standards
 };
 #endif // !DOG_H_

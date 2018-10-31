@@ -12,6 +12,7 @@ public:
 	// constructors
 	Client();
 	Client(string fn, string ln, double ppn, string appDate); // minimum
+	Client(const Client& c); // copy
 
 	// functions
 	void setDog(Dog d);
@@ -35,16 +36,16 @@ public:
 
 private:
 	//variables
-	string applicationDate; // date applied to be in VSD
-	bool paidApplicationFee = false; // has paid for the application
-	bool paidProgramFee = false; // has paid for program
-	float feesPaid; // paid to the program
-	float individualCost; // cost to the program
-	string adminComments;
-	Dog dog;
-	Trainer trainer; // get the trainer of the individual
-	float clientTotalCost; // total cost the client has had on the program
-	int missedClasses; // total missed classes the client has had
-	float retainer; // retainer the client has had to pay
+	string *m_applicationDate; // date applied to be in VSD
+	bool *m_paidApplicationFee; // has paid for the application
+	bool *m_paidProgramFee; // has paid for program
+	float *m_feesPaid; // paid to the program
+	float *m_individualCost; // cost to the program
+	string *m_adminComments;
+	Dog *m_dog;
+	Trainer *m_trainer; // get the trainer of the individual
+	float *m_clientTotalCost; // total cost the client has had on the program
+	int *m_missedClasses; // total missed classes the client has had
+	float *m_retainer; // retainer the client has had to pay
 };
 #endif

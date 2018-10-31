@@ -31,6 +31,21 @@ Individual::Individual(string fn, string ln, double ppn)
 	string adminComments = "";
 }
 
+Individual::Individual(const Individual & i)
+{
+	string firstName = i.firstName;
+	string lastName = i.lastName;
+	double phone = i.phone;
+	double phone2 = i.phone2;
+	string email = i.email;
+	string email2 = i.email2;
+	string address = i.address;
+	string city = i.city;
+	string state = i.state;
+	int zip = i.zip;
+	string adminComments = i.adminComments;
+}
+
 // methods
 void Individual::setFirstName(string fn)
 {

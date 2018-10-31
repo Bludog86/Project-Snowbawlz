@@ -14,7 +14,7 @@ public:
 	// constructors
 	Individual();
 	Individual(string fn, string ln, double ppn);// minimums
-	// copy constructor place holder
+	Individual(const Individual& c); // copy constructor
 
 	// functions
 	// set
